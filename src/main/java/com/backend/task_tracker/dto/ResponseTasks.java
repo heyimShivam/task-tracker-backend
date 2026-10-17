@@ -1,4 +1,4 @@
-package com.backend.task_tracker.DTO;
+package com.backend.task_tracker.dto;
 
 import java.util.List;
 

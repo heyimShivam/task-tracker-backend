@@ -1,10 +1,11 @@
 package com.backend.task_tracker.controller;
 
-import com.backend.task_tracker.DTO.ResponseTasks;
-import com.backend.task_tracker.Service.TaskService;
+import com.backend.task_tracker.dto.ResponseTasks;
+import com.backend.task_tracker.dto.Task;
+import com.backend.task_tracker.service.TaskService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
 
@@ -15,12 +16,22 @@ public class TaskControllerImpl implements TaskController {
     TaskControllerImpl(TaskService taskService) {
         this.taskService = taskService;
     }
-    @Override
-    public ResponseEntity<ResponseTasks> Tasks () {
-        UUID userID = null;
 
+    @Override
+    public ResponseEntity<ResponseTasks> Tasks (@PathVariable UUID userID) {
         ResponseTasks result = taskService.getTasksDetails(userID);
 
         return ResponseEntity.status(HttpStatus.OK).body(result);
+    }
+
+    public ResponseEntity<ResponseTasks> addTask(@PathVariable UUID userID, @RequestBody Task taskDeails){
+        ResponseTasks result = taskService.addTasks(userID, taskDeails);
+
+        return ResponseEntity.status(HttpStatus.OK).body(result);
+    }
+
+    public UUID getUUID(){
+        UUID userID = UUID.randomUUID();
+        return userID;
     }
 }
