@@ -18,14 +18,19 @@ public class TaskServiceImpl implements TaskService {
         return responseTasks;
     }
 
-    public ResponseTasks addTasks(UUID userID, Task taskDeails) {
+    public ResponseTasks addTasks(UUID userID, Task taskDetails) {
         List<Task> taskList = getTasksForUUID(userID);
 
-        taskList.add(taskDeails);
+        Task newTask = new Task(
+                UUID.randomUUID(),
+                taskDetails.name(),
+                taskDetails.description(),
+                taskDetails.isCompleted()
+        );
 
-        ResponseTasks responseTasks = new ResponseTasks(taskList);
+        taskList.add(newTask);
 
-        return responseTasks;
+        return new ResponseTasks(taskList);
     }
 
     private List<Task> getTasksForUUID(UUID userID) {

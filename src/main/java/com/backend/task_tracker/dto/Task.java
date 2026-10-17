@@ -7,14 +7,4 @@ public record Task(
         String name,
         String description,
         Boolean isCompleted
-) {
-    public Task {
-        if (taskID == null) {
-            taskID = UUID.randomUUID();
-        }
-    }
-
-    public Task(String name, String description, Boolean isCompleted) {
-        this(UUID.randomUUID(), name, description, isCompleted);
-    }
-}
+) {}
