@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="997aeb79-331c-475d-aa70-a421189264a6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/backend/task_tracker/Controller/TestingClass.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0" />
+      <entry key="S2" value="1.0" />
+      <entry key="S5" value="1.0000000000000013" />
+      <entry key="S10" value="1.000000091544887" />
+      <entry key="S30" value="1.0182022717664994" />
+      <entry key="S60" value="1.5110951140722761" />
+      <entry key="M2" value="4.8292484511505736" />
+      <entry key="M5" value="16.428781217915674" />
+      <entry key="M10" value="26.291339403422267" />
+      <entry key="M15" value="30.908911603264887" />
+      <entry key="M30" value="36.41881472334941" />
+      <entry key="H1" value="39.56296033056855" />
+      <entry key="H2" value="41.24317027814854" />
+      <entry key="H4" value="42.111786619178304" />
+      <entry key="D1" value="42.850584345707276" />
+      <entry key="W1" value="42.978620855309835" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="1.870297285135227E-38" />
+      <entry key="MS500" value="2.871069144010386E-8" />
+      <entry key="S2" value="0.016929834781324444" />
+      <entry key="S5" value="0.28516644133870556" />
+      <entry key="S10" value="0.7499367716812061" />
+      <entry key="S30" value="1.4469907864010059" />
+      <entry key="S60" value="1.8522365688489923" />
+      <entry key="M2" value="2.6167572500137437" />
+      <entry key="M5" value="4.001307148433189" />
+      <entry key="M10" value="4.840268234221967" />
+      <entry key="M15" value="5.185730330159668" />
+      <entry key="M30" value="5.57073724283772" />
+      <entry key="H1" value="5.779520810820364" />
+      <entry key="H2" value="5.88825698209585" />
+      <entry key="H4" value="5.943747321481786" />
+      <entry key="D1" value="5.990571156176783" />
+      <entry key="W1" value="5.998651708615759" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="2.847390721242697E-5" />
+      <entry key="MS500" value="0.12327909470507346" />
+      <entry key="S2" value="0.602846225860088" />
+      <entry key="S5" value="1.0327424389500046" />
+      <entry key="S10" value="1.5542637014226715" />
+      <entry key="S30" value="2.3623438434121558" />
+      <entry key="S60" value="3.2995781989872373" />
+      <entry key="M2" value="7.401204025537033" />
+      <entry key="M5" value="20.402478906999747" />
+      <entry key="M10" value="31.11483269058974" />
+      <entry key="M15" value="36.082640013815535" />
+      <entry key="M30" value="41.983093888440735" />
+      <entry key="H1" value="45.33912796319863" />
+      <entry key="H2" value="47.129718318898654" />
+      <entry key="H4" value="48.05467121163929" />
+      <entry key="D1" value="48.8410105519997" />
+      <entry key="W1" value="48.9772518281553" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6,
+  "fromUser": false
+}]]></component>
+  <component name="ProjectId" id="3Kp2eNbH0ctVlxA6dXqiV0ByH5n" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build task-tracker-backend.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.TaskTrackerApplication.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "develop",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/shivamchaudhary/Desktop/task-tracker-backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "settings.sync",
+    "to.speed.mode.migration.done": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="task-tracker-backend" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="task-tracker-backend" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-a203e0a19954-intellij.indexing.shared.core-IU-262.10968.63" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-IU-262.10968.63" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="997aeb79-331c-475d-aa70-a421189264a6" name="Changes" comment="" />
+      <created>1792240282508</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1792240282508</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
