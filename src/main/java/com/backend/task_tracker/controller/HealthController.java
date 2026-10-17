@@ -1,4 +1,4 @@
-package com.backend.task_tracker.Controller;
+package com.backend.task_tracker.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,9 +9,9 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api")
-public class TestingClass {
+public class HealthController {
     @GetMapping("/health")
-    public ResponseEntity<Object> applicationHealth() {
+    public ResponseEntity<Map<String, String>> applicationHealth() {
         return ResponseEntity.ok(Map.of("status", "UP"));
     }
 }
