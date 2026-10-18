@@ -1,0 +1,8 @@
+CREATE SCHEMA app_user;
+
+CREATE TABLE app_user.details (
+    user_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    name VARCHAR(25) NOT NULL,
+    email VARCHAR(60) NOT NULL UNIQUE,
+    created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

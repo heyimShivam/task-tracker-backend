@@ -18,20 +18,15 @@ public class TaskControllerImpl implements TaskController {
     }
 
     @Override
-    public ResponseEntity<ResponseTasks> Tasks (@PathVariable UUID userID) {
+    public ResponseEntity<ResponseTasks> tasks (@PathVariable UUID userID) {
         ResponseTasks result = taskService.getTasksDetails(userID);
 
         return ResponseEntity.status(HttpStatus.OK).body(result);
     }
 
-    public ResponseEntity<ResponseTasks> addTask(@PathVariable UUID userID, @RequestBody Task taskDeails){
+    public ResponseEntity<ResponseTasks> addTask(@PathVariable UUID userID, @RequestBody Task taskDeails) {
         ResponseTasks result = taskService.addTasks(userID, taskDeails);
 
         return ResponseEntity.status(HttpStatus.OK).body(result);
-    }
-
-    public UUID getUUID(){
-        UUID userID = UUID.randomUUID();
-        return userID;
     }
 }

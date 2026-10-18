@@ -2,42 +2,68 @@ package com.backend.task_tracker.service;
 
 import com.backend.task_tracker.dto.ResponseTasks;
 import com.backend.task_tracker.dto.Task;
+import com.backend.task_tracker.entity.TaskEntity;
+import com.backend.task_tracker.entity.UserEntity;
+import com.backend.task_tracker.repository.TaskRepository;
+import com.backend.task_tracker.repository.UserRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
 
 @Service
 public class TaskServiceImpl implements TaskService {
-    private final Map<UUID, List<Task>> tempStorage = new HashMap<>();
+    private final TaskRepository taskRepository;
+    private final UserRepository userRepository;
+
+    public TaskServiceImpl(
+            TaskRepository taskRepository,
+            UserRepository userRepository) {
+        this.taskRepository = taskRepository;
+        this.userRepository = userRepository;
+    }
 
     public ResponseTasks getTasksDetails(UUID userID) {
-        List<Task> taskList = getTasksForUUID(userID);
-
-        ResponseTasks responseTasks = new ResponseTasks(taskList);
-
-        return responseTasks;
-    }
-
-    public ResponseTasks addTasks(UUID userID, Task taskDetails) {
-        List<Task> taskList = getTasksForUUID(userID);
-
-        Task newTask = new Task(
-                UUID.randomUUID(),
-                taskDetails.name(),
-                taskDetails.description(),
-                taskDetails.isCompleted()
-        );
-
-        taskList.add(newTask);
-
-        return new ResponseTasks(taskList);
-    }
-
-    private List<Task> getTasksForUUID(UUID userID) {
-        if(!tempStorage.containsKey(userID)) {
-            tempStorage.put(userID, new ArrayList<>());
+        if (!userRepository.existsById(userID)) {
+            throw new IllegalArgumentException("User not found: " + userID);
         }
 
-        return tempStorage.get(userID);
+        List<Task> tasks = taskRepository.findByUser_UserId(userID)
+                .stream()
+                .map(task -> new Task(
+                        task.getTaskId(),
+                        task.getName(),
+                        task.getDescription(),
+                        task.getIsCompleted()
+                ))
+                .toList();
+
+        return new ResponseTasks(tasks);
+    }
+
+    @Transactional
+    public ResponseTasks addTasks(UUID userID, Task taskDetails) {
+        UserEntity user = userRepository.findById(userID)
+                .orElseThrow(() ->
+                        new IllegalArgumentException(
+                                "User not found: " + userID));
+
+        TaskEntity entity = new TaskEntity(
+                taskDetails.name(),
+                taskDetails.description(),
+                taskDetails.isCompleted(),
+                user
+        );
+
+        TaskEntity saved = taskRepository.save(entity);
+
+        Task responseTask = new Task(
+                saved.getTaskId(),
+                saved.getName(),
+                saved.getDescription(),
+                saved.getIsCompleted()
+        );
+
+        return new ResponseTasks(List.of(responseTask));
     }
 }

@@ -1,0 +1,1 @@
+ALTER TABLE public.tasks SET SCHEMA app_user;
