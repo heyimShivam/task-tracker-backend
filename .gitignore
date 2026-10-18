@@ -5,3 +5,5 @@ build/
 # IntelliJ IDEA
 .idea/
 *.iml
+
+.env
