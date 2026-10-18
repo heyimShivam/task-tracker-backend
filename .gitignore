@@ -1,9 +1,12 @@
-# Gradle generated files
+# Gradle
 .gradle/
-build/
+**/build/
 
 # IntelliJ IDEA
 .idea/
+**/.idea/
 *.iml
 
+# Environment variables and secrets
 .env
+**/.env
