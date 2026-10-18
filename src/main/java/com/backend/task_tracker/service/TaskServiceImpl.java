@@ -66,4 +66,35 @@ public class TaskServiceImpl implements TaskService {
 
         return new ResponseTasks(List.of(responseTask));
     }
+
+    @Transactional
+    public ResponseTasks patchTask(UUID taskID, Task taskDeails) {
+        TaskEntity task = taskRepository.findById(taskID)
+                .orElseThrow(() ->
+                        new IllegalArgumentException(
+                                "Task not found: " + taskID));
+
+        task.setName(taskDeails.name());
+        task.setDescription(taskDeails.description());
+        task.setIsCompleted(taskDeails.isCompleted());
+
+        Task responseTask = new Task(
+                task.getTaskId(),
+                task.getName(),
+                task.getDescription(),
+                task.getIsCompleted()
+        );
+
+        return new ResponseTasks(List.of(responseTask));
+    }
+
+    @Transactional
+    public void deleteTask(UUID taskID) {
+        TaskEntity task = taskRepository.findById(taskID)
+                .orElseThrow(() ->
+                        new IllegalArgumentException(
+                                "Task not found: " + taskID));
+
+        taskRepository.delete(task);
+    }
 }

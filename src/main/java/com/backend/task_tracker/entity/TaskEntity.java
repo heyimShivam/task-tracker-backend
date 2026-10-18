@@ -70,6 +70,11 @@ public class TaskEntity {
         return isCompleted;
     }
 
+    public void setIsCompleted(Boolean isCompleted) {
+        this.isCompleted = isCompleted;
+    }
+
+
     public void setName(String name) {
         this.name = name;
     }
